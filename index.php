@@ -1,8 +1,10 @@
 <?php
 
 
+
 require_once('vendor/autoload.php');
 use App\src\Exac\Form;
+use App\src\Exac\Bootstrap;
 use App\src\Archer;
 use App\src\Personnage;
 
@@ -39,25 +41,19 @@ $form1->input('text', 'username');
 $form2 = new Form();
 $form2->input('password', 'password');
 $form->submit(); */
+require_once('elements/header.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
+
     <form action="" method="POST">
         <?php
-        $form1 = new Form();
+        $form1 = new Bootstrap();
         $form1->input('text', 'username');
         echo " \n";
-        $form2 = new Form();
+        $form2 = new Bootstrap();
         echo $form2->input('password', 'mots-de-pass');
         Form::submit();
 
@@ -65,6 +61,5 @@ $form->submit(); */
 
 
     </form>
-</body>
-
-</html>
+</div>
+<?php require_once('elements/header.php'); ?>
