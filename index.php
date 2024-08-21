@@ -44,10 +44,11 @@ $form->submit(); */
 require_once('elements/header.php');
 ?>
 
-<div class="container">
 
 
 
+<div class="container mt-2">
+    <h1>Formulaire dynamique </h1>
     <form action="" method="POST">
         <?php
         $form1 = new Bootstrap();
